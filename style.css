@@ -227,8 +227,8 @@ Navbar Responsiveness
     z-index: 1;
     transition: all 0.5s linear;
   }
-  .navbar-collapsed::after{
-    content: '';
+  .navbar-collapsed::after {
+    content: "";
     height: 1px;
     background-color: black;
     position: relative;
@@ -352,7 +352,9 @@ Chase Dreams Section
 =======================*/
 
 .chase-dreams-sec {
-  padding: 75px 0;
+  display: flex;
+  min-height: calc(100vh - 80px);
+  align-items: center;
 }
 .chase-dreams-sec .subtitle {
   margin: 23px 0 38px;
@@ -816,6 +818,10 @@ Responsiveness
   }
 
   /* Chase Dreams Section */
+
+  .chase-dreams-sec {
+    min-height: calc(100vh - 63px);
+  }
   .chase-dreams-sec .col-4,
   .chase-dreams-sec .col-8 {
     width: 100%;
@@ -928,7 +934,7 @@ Responsiveness
   }
   /* Chase Dreams Section */
   .chase-dreams-sec {
-    padding: 45px 0;
+    min-height: calc(100vh - 53px);
   }
   .chase-dreams-sec .float-btns {
     padding: 5px 10px;

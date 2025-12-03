@@ -117,18 +117,23 @@ a {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 -15px;
 }
 .col-3 {
   width: calc(8.33% * 3);
+  padding: 0 15px;
 }
 .col-4 {
   width: calc(8.33% * 4);
+  padding: 0 15px;
 }
 .col-8 {
   width: calc(8.33% * 8);
+  padding: 0 15px;
 }
 .col-20per {
   width: 20%;
+  padding: 0 15px;
 }
 .title-1 {
   font-size: 63px;
@@ -221,6 +226,14 @@ Navbar Responsiveness
     background-color: white;
     z-index: 1;
     transition: all 0.5s linear;
+  }
+  .navbar-collapsed::after{
+    content: '';
+    height: 1px;
+    background-color: black;
+    position: relative;
+    width: 100%;
+    bottom: 0;
   }
   .navbar-toggler {
     display: block;
@@ -444,9 +457,8 @@ Customer Experience Section
   align-items: start;
 }
 .customer-exp-sec .card {
-  max-width: 207px;
-  padding: 24px;
-  margin: auto;
+  max-width: 160px;
+  margin: 0 auto 30px;
 }
 .customer-exp-sec .card-img {
   height: 37px;
@@ -462,7 +474,6 @@ Customer Experience Section
   line-height: 24px;
   color: rgba(0, 0, 0, 40%);
 }
-
 
 /* ==============================
 Our Services Section
@@ -586,8 +597,9 @@ Footer
   line-height: 22px;
   margin-bottom: 16px;
 }
-.footer-sec .social-logos {
-  margin: 0 -8px;
+.footer-sec .social-logos-row {
+  display: flex;
+  align-items: center;
 }
 .footer-sec .social-logo {
   height: 24px;
@@ -727,7 +739,7 @@ Responsiveness
     max-width: 430px;
   }
   .customer-exp-sec .subtitle {
-    margin: 15px auto 30px;
+    margin: 20px auto 50px;
   }
   /* Our Services Section */
   .best-results-sec {
@@ -777,7 +789,7 @@ Responsiveness
   .footer-sec .col-20per {
     width: 33.33%;
   }
-  .footer-sec .primary-row {
+  .footer-sec .row {
     justify-content: center;
   }
   .footer-sec .first-card {
@@ -804,24 +816,45 @@ Responsiveness
   }
 
   /* Chase Dreams Section */
-  .chase-dreams-sec .subtitle {
-    margin: 10px 0 25px;
+  .chase-dreams-sec .col-4,
+  .chase-dreams-sec .col-8 {
+    width: 100%;
+    text-align: center;
   }
-  .chase-dreams-sec .float-btns {
-    padding: 5px 10px;
+  .chase-dreams-sec .col-4 {
+    order: 2;
+  }
+  .chase-dreams-sec .col-8 {
+    order: 1;
+  }
+  .chase-dreams-sec .subtitle {
+    margin: 10px auto 25px;
+    max-width: 320px;
+    text-align: center;
+  }
+  .chase-dreams-sec .contact-row {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .chase-dreams-sec .button-row {
+    gap: 20px;
+    justify-content: center;
+  }
+  .chase-dreams-sec .button-row > .btn1 {
+    margin: 0;
+  }
+  .chase-dreams-sec .float-btn-1 {
+    left: 96px;
+    top: 54px;
+  }
+
+  .chase-dreams-sec .float-btn-2 {
+    top: 99px;
+    right: 82px;
   }
   .chase-dreams-sec .float-img {
     margin-right: 6px;
-  }
-  .chase-dreams-sec .float-img {
     height: 19px;
-  }
-  .chase-dreams-sec .float-btn-1 {
-    left: 19px;
-  }
-  .chase-dreams-sec .float-btn-2 {
-    top: 64px;
-    right: 7px;
   }
   .chase-dreams-sec .phone-logo {
     height: 20px;
@@ -843,9 +876,6 @@ Responsiveness
   /* Customer Experience Section */
   .customer-exp-sec h3 {
     font-size: 15px !important;
-  }
-  .customer-exp-sec .card {
-    margin: auto;
   }
   .customer-exp-sec .col-3 {
     width: 33.33%;
@@ -900,41 +930,30 @@ Responsiveness
   .chase-dreams-sec {
     padding: 45px 0;
   }
-  .chase-dreams-sec .col-4,
-  .chase-dreams-sec .col-8 {
-    width: 100%;
-    text-align: center;
+  .chase-dreams-sec .float-btns {
+    padding: 5px 10px;
   }
-  .chase-dreams-sec .col-4 {
-    order: 2;
+  .chase-dreams-sec .float-img {
+    height: 16px;
   }
-  .chase-dreams-sec .col-8 {
-    order: 1;
+  .chase-dreams-sec .float-btn-1 {
+    left: 28px;
+    top: 26px;
+  }
+  .chase-dreams-sec .float-btn-2 {
+    top: 48px;
+    right: 23px;
   }
   .chase-dreams-sec .subtitle {
     margin: 10px auto 25px;
     max-width: 270px;
     text-align: center;
   }
-  .chase-dreams-sec .contact-row {
-    justify-content: center;
+  .chase-dreams-sec .subtitle {
+    max-width: 270px;
   }
   .chase-dreams-sec .button-row {
-    gap: 20px;
-    justify-content: center;
-  }
-  .chase-dreams-sec .contact-row {
-    margin-top: 20px;
-  }
-  .chase-dreams-sec .button-row > .btn1 {
-    margin: 0;
-  }
-  .chase-dreams-sec .float-btn-1 {
-    left: 0px;
-  }
-  .chase-dreams-sec .float-btn-2 {
-    top: 57px;
-    right: 0px;
+    gap: 10px;
   }
   /* Customer Experience Section */
   .customer-exp-sec {
@@ -943,8 +962,8 @@ Responsiveness
   .customer-exp-sec .col-3 {
     width: 50%;
   }
-  .customer-exp-sec .card {
-    padding: 16px;
+  .customer-exp-sec .card-desc {
+    font-size: 12px;
   }
   /* Our Services Section */
   .our-services-sec {
@@ -982,6 +1001,9 @@ Responsiveness
   .best-results-sec .col-3 {
     width: 50%;
   }
+  .best-results-sec .subtitle {
+    margin: 20px auto 50px;
+  }
   .best-results-sec .card-title {
     font-size: 22px;
   }
@@ -990,14 +1012,21 @@ Responsiveness
     margin-top: 6px;
   }
   /* Footer Section */
-  .footer-sec .col-20per:nth-child(2) > .card {
-    max-width: 112px;
+  .footer-sec {
+    padding: 45px 0;
+  }
+  .footer-sec .row {
+    margin: 0 -10px;
   }
   .footer-sec .col-20per {
     width: 50%;
+    padding: 0 10px;
   }
   .footer-sec .card {
     margin-bottom: 40px;
+  }
+  .footer-sec .col-20per:last-child > .card {
+    margin-bottom: 0;
   }
   .footer-sec .card-title {
     margin-bottom: 16px;
